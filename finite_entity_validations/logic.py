@@ -48,24 +48,10 @@ def validate_finite_values_entity(values: List[Dict], supported_values: List[str
         else:
             return (filled, partially_filled, invalid_trigger, {})
 
-    # if support_multiple == True and pick_first == True:
-    #     if partially_filled == True:
-    #         if list_of_values[0] == list_of_valid_values[0]:
-    #             param_values = list_of_valid_values[0]
-    #             param_values_dict = {key: param_values.upper()}
-    #             return (filled, partially_filled, invalid_trigger, param_values_dict)
-    #         else:
-    #             return(filled,partially_filled,invalid_trigger,{})
-    #     else:
-    #         params_value = list_of_valid_values[0]
-    #         params_values_dict = {key: params_value.upper()}
-    #         return (filled, partially_filled, '', params_values_dict)
-
-    # if support_multiple == True and pick_first == False:
-    if len(list_of_valid_values) == len(list_of_values):
+    if filled:
         param_values = list(map(lambda valid_value: valid_value.upper(), list_of_valid_values))
         param_values_dict = {key: param_values}
-        return (filled, partially_filled, "", param_values_dict)
+        return (filled, partially_filled, '', param_values_dict)
     else:
         return (filled, partially_filled,invalid_trigger, {})
 

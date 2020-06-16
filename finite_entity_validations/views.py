@@ -3,14 +3,10 @@ from typing import Tuple
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .validation_logic import validate_finite_values_entity
-
-
-# Create your views here.
-
+from .logic import validate_finite_values_entity
 
 @api_view(['POST'])
-def posting(request):
+def validate(request):
     if request.method == 'POST':
         values_to_be_validated = request.data.get("values")
         invalid_trigger = request.data.get("invalid_trigger", None)

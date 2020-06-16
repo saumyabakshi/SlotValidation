@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ValidationsConfig(AppConfig):
-    name = 'validations'
+    name = 'finite_entity_validations'

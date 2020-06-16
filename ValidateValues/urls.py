@@ -1,4 +1,4 @@
-"""ValidatValues URL Configuration
+"""ValidateValues URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('validations.urls')),
+    path('api/', include('finite_entity_validations.urls')),
     path('api/', include('numeric_validations.urls')),
 ]
