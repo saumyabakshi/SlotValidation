@@ -23,7 +23,7 @@ def validate_finite_values_entity(values: List[Dict], supported_values: List[str
         return (False, False, invalid_trigger, {})
 
     list_of_values = [value_dict['value'] for value_dict in values]
-    list_of_valid_values = list(set(list_of_values) & set(supported_values))
+    list_of_valid_values = [value for value in list_of_values if value in supported_values]
 
     if not list_of_valid_values:
         filled = False
