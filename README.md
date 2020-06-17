@@ -6,7 +6,7 @@ Assumptions :
 
 2.I have allowed duplicate slot values to be processed.
 
-3. For the numeric entity post api, I've assumed same as above, default values (true, false) for the (true,true) and (false,false) case. In case of no constraint and no value , Ive returned the response as expected by 'no value' condition.
+3.For the numeric entity post api, I've assumed same as above, default values (true, false) for the (true,true) and (false,false) case. In case of no constraint and no value , Ive returned the response as expected by 'no value' condition.
 
 Docker:
 
