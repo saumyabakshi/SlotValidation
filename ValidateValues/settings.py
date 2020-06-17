@@ -25,7 +25,7 @@ SECRET_KEY = 'n46b6hwa(viio-au_b&q35&f4!xvsk!uxmgj%&hwba&mw4ir3q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
