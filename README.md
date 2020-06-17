@@ -11,4 +11,5 @@ Assumptions :
 Docker:
 
 command to build docker image -> docker build -t slot-validation:v0 .
+
 command to run docker container -> docker run -p 8000:8000 slot-validation:v0 
