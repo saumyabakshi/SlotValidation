@@ -55,7 +55,7 @@ def validate_numeric_entity(values: List[Dict], invalid_trigger: str = None, key
         filled = False
         partially_filled = True
 
-    if support_multiple == False and pick_first == True:
+    if pick_first:
         if list_of_values[0] in validated_values:
             param_value = validated_values[0]
             param_dict = {key: param_value}
@@ -66,12 +66,10 @@ def validate_numeric_entity(values: List[Dict], invalid_trigger: str = None, key
         else:
             return(filled,partially_filled,invalid_trigger,{})
 
-    # if support_multiple is True and pick_first is False:
+    # support_multiple True by default
     param_dict = {key: validated_values}
     if filled:
         return (filled,partially_filled,'',param_dict)
     else:
         return (filled,partially_filled,invalid_trigger,param_dict)
-
-
 
