@@ -2,11 +2,11 @@
 
 Assumptions : 
 
-1.For finite entity post api, I have handled the case when support_multiple and pick_first have either (true, false) or (false,true) . For the cases (true, true) and (false,false) I've assumed the default values as mentioned in the function and treated them as (true, false)
+1.For finite entity post api, if pick_first is true then first element is picked else the logic works on default values of supported_multiple true and pick_first false.
 
 2.I have allowed duplicate slot values to be processed.
 
-3.For the numeric entity post api, I've assumed same as above, default values (true, false) for the (true,true) and (false,false) case. In case of no constraint and no value , Ive returned the response as expected by 'no value' condition.
+3.For the numeric entity post api, if pick_first is true then first element is picked else the logic works on default values of supported_multiple true and pick_first false. In case of no constraint and no value , Ive returned the response as expected by 'no value' condition.
 
 Docker:
 
