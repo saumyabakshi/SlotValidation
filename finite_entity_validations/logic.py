@@ -37,7 +37,7 @@ def validate_finite_values_entity(values: List[Dict], supported_values: List[str
         filled = False
         partially_filled = True
 
-    if pick_first == True:
+    if pick_first:
         if list_of_values[0] == list_of_valid_values[0]:
             param_values = list_of_valid_values[0]
             param_values_dict = {key: param_values.upper()}
